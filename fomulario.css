@@ -1,0 +1,21 @@
+form {
+   width: 500px;
+   margin: auto;
+}
+fieldset{
+    margin: 20px;
+    border-color: #cecece;
+}
+footer p{
+    text-align: center;
+}
+.a {
+    text-align: right;
+ }
+ body{
+    font: normal 16px Arial,
+    Verdana, serif;
+}
+h2{
+    text-align: center;
+}

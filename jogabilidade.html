@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="jogabilidade.css">
+    <title>Jogabilidade e Personagens</title>
+</head>
+<body>
+    <h1>Personagens e o Cenario</h1>
+    <div class="a">
+    <a href="batalhaterramedia.html">Inicio</a>
+    <a href="jogabilidade.html">Jogabilidade e Personagens</a>
+    <a href="criarpersonagens.html">Criar Personagens</a>
+    <a href="sobresite.html">Sobre Autor</a>
+    </div>
+    
+    <h2>Jogabilidade</h2>
+    <p> O jogo de batalha entre personagens baseados na Terra-Média que é o mundo do Senhor dos Anéis.
+         A batalha ocorrepor turnos de forma automáticano formato de todos contra todos,
+         considerando as características dos personagens. Cadapersonagem é de uma naçãoe possui 5 habilidades,
+         conforme descrito a seguir.</p>
+    <p>As habilidadesque  os  personagens  possuem são força,  velocidade,  precisão, armadurae recuperação.
+         Além da nacionalidade e das 5 habilidades,
+         o personagem possui seus pontos de energia e um nome para identificá-lo ao
+         longo de suas interações no jogo. No  início  do  jogo,
+         o  personagem  possui  100  pontosde  energia  e  outros  100
+         pontos  de habilidadesque  devem  ser  distribuídos entre as  habilidades da
+        forma  que  o  jogador preferir.</p>
+    <p id="for">•Força: a capacidade que o personagem possui de infringir danos no adversário no combate a curta distância;</p>
+    <p id="pre">•Precisão: a precisão denota a capacidade na qual o personagem tem para infringir danos no adversário à longa distância;</p>
+    <p id="velo">•Velocidade: o tempo no qualo personagem leva para se aproximar do adversário;</p>
+    <p id="ar">•Armadura: o quanto reduz o impacto dos ataques do adversário,
+     independente da distância na qual os ataques são realizados;</p>
+    <p id="re">•Recuperação: a capacidade de recuperar pontos para a próxima batalha.</p>
+
+    <div id="comando">
+        <button type="button" onclick="tabelaPer()" id="add">Ler Mais</button> 
+    </div>
+    
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <hr>
+        <div id="divT"></div>
+        <div id="divD"></div>
+        <div id="divK"></div>
+        <div id="divL"></div>
+        <hr>
+        <div id="div5"></div>
+        <div id="div6"></div>
+        <div id="div7"></div>
+        <div id="div8"></div>
+        <hr>
+        <div id="div9"></div>
+        <div id="div10"></div>
+        <div id="div11"></div>
+        <div id="div12"></div>
+        <hr>
+        <div id="div13"></div>
+        <div id="div14"></div>
+        <div id="div15"></div>
+        <div id="div16"></div>
+        <hr>
+        <div id="div17"></div>
+        <div id="div18"></div>
+        <div id="div19"></div>
+        <div id="div20"></div>
+        <hr>
+        <div id="div21"></div>
+        <div id="div22"></div>
+        <div id="div23"></div>
+        <div id="div24"></div>
+        <hr>
+        <div id="div25"></div>
+        <div id="div26"></div>
+        <div id="div27"></div>
+        <div id="div28"></div>
+
+    
+
+    <script type="text/javascript">
+        var personagens = JSON.parse(`[{
+            "id": 1,
+            "nacao": "Hobbit",
+            "casa": "O Condado",
+            "descricao": "Os  hobbits pés-peludos são o tipo mais comum de hobbit. São morenos, preferem planícies e regiões banhadas por rios.Os cascalvas tem a pele e o cabelo mais claros, são mais altos e mais esguios que os outros tipos de hobbit, preferem bosques e florestas para morar além de serem descendentes de elfos. Outros hobbits dizem que estes têm 'sangue de fada', por conta de sua ascendência.Os grados são tipos de hobbit mais robustos e frequentemente cultivam barbas. São mais próximos aos  anões,  e  Sméagol  costumava  ser  um  cascalva  antes  de  ser  corrompido  pelo anel",
+            "personagens_saga": ["Bilbo  Bolseiro", "Samwise  Gamgee", "Frodo Bolseiro"],
+            "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Bilbo_Bols%C3%B3n.png/227px-Bilbo_Bols%C3%B3n.png"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div1').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div2').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div3').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div4').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+        "id": 2,
+ 	    "nacao": "Orc Snaga",
+ 	    "casa": "Cirith Ungol",
+ 	    "descricao": "Orcs eram os principais soldados dos exércitos do Lorde das Trevas e às vezes os mais fracos (mas mais numerosos) de seus servos. Eles foram criados pelo primeiro Lorde das Trevas, Morgoth , antes da Primeira Era e serviram a ele e mais tarde seu sucessor em sua busca para dominar a Terra-média .",
+ 	    "personagens_saga": ["Golfimbul", "Bolg", "Azog"],
+ 	    "imagem": "https://static.wikia.nocookie.net/lotr/images/e/ea/OrcsArt.gif/revision/latest?cb=20190316060342"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('divT').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('divD').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('divK').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('divL').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+        
+ 	"id": 3,
+ 	"nacao": "Uruk-hai",
+ 	"casa": "Portão Negro",
+ 	"descricao": "Uruk-hai, ou os Uruks, são os orcs mais fortes e conhecidos por serem os guerreiros mais ferozes e violentos da Terra-média . Os Uruk-hai vivem em Isengard e Mordor . No entanto, no romance O Senhor dos Anéis , o termo Uruk-hai foi usado apenas para os orcs que vivem em Isengard. Eles também eram chamados de Isengards. Os orcs que viviam em Mordor eram chamados de Uruks de Mordor, e às vezes também são chamados de Uruks Negros.",
+ 	"personagens-saga": ["Uglúk", "Lugdush", "Mauhur"],
+ 	"imagem": "https://static.wikia.nocookie.net/villains/images/0/04/Mauhur.jpg/revision/latest?cb=20130903142210"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div5').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div6').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div7').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div8').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+    "id": 4,
+ 	"nacao": "Guerreiro de Gondor",
+ 	"casa": "Minas Tirith",
+ 	"descricao": "Gondor é o reinado mais poderoso dos Homens em Terra-Média.",
+ 	"personagens_saga": ["Boromir", "Gandalf", "Aragorn"],
+ 	"imagem": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Boromir.png"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div9').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div10').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div11').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div12').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+      
+ 	"id": 5,
+ 	"nacao": "Elfo da Floresta",
+ 	"casa": "Floresta das Trevas",
+ 	"descricao": "Elfos da Floresta são um povo mágico e selvagem, de ferocidade e destreza sobrenatural, que domam e se tornam parte das florestas que habitam.",
+ 	"personagens_saga": ["Legolas", "Vanyar", "Eldar"],
+ 	"imagem": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Un_elfe_un_peu_frimeur_jnl_fal.jpg"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div13').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div14').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div15').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div16').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+       
+ 	"id": 6,
+ 	"nacao": "Cavaleiro de Rohan",
+ 	"casa": "Abismo de Helm",
+ 	"descricao": "Durante a XIII século de Terceira Idade (TA), os governantes de Gondor formaram uma aliança estreita com os habitantes do território do norte deRhovanion, um pai de três pessoas Casas do Edain da Primeira Era. Estes homens foram dizimados pela  Grande  Peste  de  1636  TA,  e  ainda  mais  pelas  invasões  dos  carrinhos  de Pessoas-de-no final do XX século. Após essas invasões, alguns desses homens, liderados por um certo Frumgar, migraram para o vale superior do Anduin em 1977 TA. No local, eles entraram em conflito com os Anões sobre o compartilhamento do tesouro do dragão Scatha, morto por Fram, filho de Frumgar. Esses homens, que tomaram o nome de Éothéod, viveram por vários séculos ao redor das nascentes do Anduin, mas se tornaram cada vez mais numerosos e se sentiam confinados em suas terras.  Apesar  do  afastamento,  eles  mantiveram  laços  com  Gondor,  e  quando  o Administrador Cirion se viu atacado por hordas de Orientais e Orcs, em 2510 AT, ele chamou Eorl, o Jovem, o novo Senhor dos Éothéod. Ele chegou inesperadamente e  venceu  a  batalha  decisiva  dos  Campos  de  Celebrant.",
+ 	"personagens_saga": ["Théoden", "Théodred", "Deorwine"],
+ 	"imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Cavalier-rohan.jpg/220px-Cavalier-rohan.jpg"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div17').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div18').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div19').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div20').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+    "id": 7,
+ 	"nacao": "Elfo de Lothlórien",
+ 	"casa": "Caras Galadhon",
+ 	"descricao": "Lothlórien é um reino e floresta dos elfos restantes na Terra Média durante a Terceira Era. O reino tem um papel importante em O Senhor dos Anéis como o centro élfico de resistência contra Sauron e é um símbolo à estética élfica de preservação florestal que fornece um espaço 'fora do tempo'",
+ 	"personagens-saga": ["Noldor", "Teleri", "Galadriel"],
+ 	"imagem": "https://upload.wikimedia.org/wikipedia/pt/b/b3/Lothlorien_screenshot_%281%29.jpg"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div21').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div22').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div23').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div24').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+var personagens = JSON.parse(`[{
+    "id": 8,
+ 	"nacao": "Anão",
+ 	"casa": "Colinas de Ferro",
+ 	"descricao": "Os anões são retratados como um povo muito antigo que despertou, como os elfos, no início da Primeira Era, antes da existência do Sol e da Lua (elfos, no entanto, despertaram primeiro). Em O Silmarillion, os anões são descritos como mais baixos e atarracados que elfos e homens, capazes de suportar tanto calor e frio. Embora sejam mortais, têm uma vida média de 250 anos.",
+ 	"personagens_saga": ["Balin", "Bifur", "Durin, o Imortal"],
+ 	"imagem": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Dwarf_by_BrokenMachine86.jpg"
+        }]`);
+         personagens.forEach(function(textP){
+              document.getElementById('div25').innerHTML += '<h1>'+textP.nacao+'</h1>';
+              document.getElementById('div26').innerHTML += '<ul>'+'<li>'+textP.id+'</li>'+'<li>'+textP.personagens_saga+'</li>'+'<li>'+textP.casa+'</li>'+'</ul>';
+              document.getElementById('div27').innerHTML += '<p>'+textP.descricao+'</p>';
+              document.getElementById('div28').innerHTML += '<p class="imagem"><img src="'+textP.imagem+'"width="300" height="200">'+'</p>';
+    
+});
+function tabelaPer(){
+    console.log("clicou em'tabelaPer'");
+    novaDiv = document.createElement('div1','div2','div3','div4','divT','divD','divK','divL','div5','div6',
+    'div7','div8','div9','div10','div11','div12','div13','div14','div15','div16','div17','div18','div19','div20',
+    'div21','div22','div23','div24','div25','div26','div27','div28');
+    escreveHtml(novaDiv);
+}
+
+    </script>
+    <h2>A Batalha</h2>
+    <p>A  batalha  é  realizada  em  um  cenário  fixo  no  qual  podem  ser  alocados  até oito jogadores,
+        sendo que só pode haver um personagem de cada nação.
+        O cenário é fixo porque a batalha inteira ocorre neste único cenário escolhido.
+        Dentre os cenários possíveis,
+        o jogo pode definir qualquer uma das oito casas das nações.</p>
+    <p>Não  existem  alianças  e  “amizades”  entre  os  personagens,  portanto  eles  se enfrentam em
+        duelos de um contra o outro em cada rodadae o vencedor avança para a próxima rodada.
+        No início da rodada, ospersonagens são distribuídos aleatoriamente em pares  para  realizarem a batalha,
+        caso a  quantidade  de  personagens  na  batalha  seja ímpar,
+        um deles ficará fora da batalha e se classificará automaticamente para a rodada seguinte.
+        Os vencedores de uma rodada são novamente distribuídos aleatoriamente para se
+        enfrentarem  em  uma  nova  batalha.  As  rodadas  são  repetidas  de  acordo
+        com  a quantidade  restante  de  personagens  na  arena,  até  que  ocorra  a  batalha
+        finale  seja definido um personagem como o vencedor.
+        O jogador que “sobrou” na rodada anterior não pode sobrar novamente na rodada seguinte.</p>
+    <h2>O Duelo</h2>
+    <p>A batalha é realizada em turnos de duelosdiretos entre dois personagens, 
+        conforme foi descrito anteriormente.
+        Porém, é preciso descrever com mais detalhes como se deve determinar o vencedor de cada duelo.</p>
+    <p>Antes,  deve-se  observar  que um duelo possui  como  informações de  entrada:
+    o cenário da batalha e os dois personagens do confronto com as suas características. Após o confronto,
+     a  informação de  saída  é o  vencedordo confronto com  os  danos que  sofreue infringiu.</p>
+    <p>O confronto ocorre em turnosno qual cada personagem faz uma jogada que pode serataque,
+     defesaou movimentação em direção ao adversário.</p>
+    <p>O ataque é o golpe desferido pelo personagem no adversário.
+    O golpe possui uma probabilidade de atingir o adversárioe essa probabilidade é 
+    calculada de acordo com a sua habilidade naquele tipo de ataque. O ataque pode ser do tipo:</p>
+    <p id="dec">•Defesa  curta é aquela  que  visa  proteger  o  personagem  do  ataque curto desferido pelo adversário;</p>
+    <p id="del">•Defesa  longa  é  aquela  que  visa  proteger  o  personagem  do  ataque  longo desferido pelo adversário.</p>
+    <p>Considera-se que foi realizada a defesa se a ação do personagem de defesa e se o  adversário
+    deferiu  algum  golpe  contra  ele.
+    Caso  ocorra  a  defesa,  a  redução  do  dano causado deve consideraro tipo de ataque recebido,
+    habilidade do adversário no tipo de ataque  desferido,
+    a  capacidade  do  personagem  em realizar a  defesa  e  bônus  ou penalidades
+    causadas pelo cenário da batalha.</p>
+    <p>Movimentação: é o avanço do personagem na arena do confronto.
+    Esse avanço se dá um passo por vez até que não existam mais passos entre o personagem e o adversário.</p>   
+</body>
+<hr>
+<footer>
+    <p>Curso de TI Estacio de Brasilia em 2022.1 (TIEB 2022.1)</p>
+    <p>Todo direitos reservados.</p>
+    <p>( Terra-Média, locais e personagens são direitos de
+    <a href="htpps://www.middleearth.com/home.html">Tolkien Enterprises</a>)</p>
+    </footer>
+</html>
